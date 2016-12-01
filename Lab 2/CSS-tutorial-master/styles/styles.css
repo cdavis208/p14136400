@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  background-color:beige;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+#container {
+  /*width: 900px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+}
+header {
+ 
+  
+    background: linear-gradient(beige, paleturquoise); /* Standard syntax */
+  color: darkgray;
+}
+header h1 {
+  font-size: 12px;
+  letter-spacing: 6px;
+  margin: 0;
+  line-height: 3em;
+  text-align: center; /* note CSS spelling of ‘center’ */
+}
+
+nav {
+  /*background-color: #bdcdbd;*/
+  /*width: 150px;*/
+  margin:10px;
+  position:fixed;
+  font-size: 1em;
+  line-height: 2.5em;
+  text-align: center;
+  right:0px;
+  border-spacing: 20px;
+  border-style:inset;
+  
+  
+  /*background: #000;*/
+  /*border-bottom: 2px solid #565;*/
+}
+nav a:link,
+nav a:visited {
+  position:relative;
+  display: block;
+  white-space:nowrap;
+  background: white;
+  width: 100%; /* 20% with 5 items will fill the width */
+  text-decoration: none;
+  color: #000;
+  /*border-bottom: 4px solid #565;*/
+  transition: all 0.5s;
+  margin-bottom:10px;
+  border: #B1B1B1 solid;
+  
+  border-width: 0px 1px 0px 0px;
+  padding: 10px 5px 10px 12px; 
+}
+
+
+nav a:hover,
+nav a.here  {
+background: linear-gradient(beige, paleturquoise); /* Standard syntax */
+  color:darkgrey;
+  /*border-bottom: 4px solid #9aa;*/
+}
+nav a.here {
+  background: linear-gradient(beige, paleturquoise); /* Standard syntax */
+}
+
+main {
+  /*width: 490px;*/
+  /*float: right;*/
+  width:74%;
+  clear: both;
+  /*padding: 0,0,0;*/ 
+  /* top, right-left, bottom */
+  
+  font-size: 1em;
+  
+  overflow: auto;
+  column-count: 2;
+  column-gap: 50px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+section {
+  clear: both;
+  margin-top: 1.5em;
+  height:400px;
+  overflow: auto;
+  position:relative;
+  border:2px black solid; 
+  background-color: #fff;
+}
+section h2 {
+  font-size: 15px;
+  text-align:center;
+  padding:20px;
+  margin: 20px; 
+  color: #464;
+  background:paleturquoise;
+}
+section:first-child h2 {
+  border-top: none;
+}
+/* SEE http://www.w3schools.com/cssref/sel_firstchild.asp */
+
+section p {
+  margin: 1em 0 0; /* top, right and left, bottom */
+}
+
+section a[href="#"] {
+  display: block;
+  color: #999;
+  position:absolute;
+  right:15px;
+  bottom:0px;
+}
+
+
+
+section a[href="#"]:hover{
+ 
+  transition:all.5s;
+  color:red;
+}
+
+
+/* SEE http://www.w3schools.com/css/css_attribute_selectors.asp */
+
+figure {
+  /*width: 500px;*/
+  position:relative;
+  width: 40%;
+  float: left;
+  border: 1px solid #333;
+  background: #565;
+  color: #fff;
+  padding: 0;
+  margin: 1em 2% 3em 0; /* top, right, bottom, left */
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+}
+
+figure figcaption {
+  text-align: center;
+  padding: 2px 6px;
+}
+
+footer {
+  clear: both;
+  border-top: 2px solid #676;
+  padding: 0.5em 30px; /* top-bottom, right-left */
+  background-color: #9a9;
+  text-align: right;
+}
+/*#container,
+header,
+main,
+nav,
+section,
+figure,
+footer {
+  box-sizing: border-box;
+}*/

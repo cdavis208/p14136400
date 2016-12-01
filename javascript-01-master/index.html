@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript: Event Listener</title>
+  <style>
+    #get-name { background: #eee; padding: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1> This title now shows: <span id="my-name2">null</span></h1>
+  <p>Hello, <span id="my-name">anonymous user</span>!</p>
+
+  <form id="get-name" action="#" method="post">
+    <label for="user-name">Enter name:</label>
+    <input type="text" id="user-name" placeholder="Your name?">
+    <input type="submit">
+  </form>
+
+  <form id="get-name2" action="#" method="post">
+    <label for="user-name2">Enter name:</label>
+    <input type="text" id="user-name2" placeholder="Your name?">
+    <input type="submit">
+  </form>
+
+  <form id="change-colour" action="#" method="post">
+    <label for="lbl-colour">Choose colour:</label>
+    <input type="text" id="done-colour" placeholder="Which colour?"> 
+    <input type="submit" >
+  </form>
+
+  
+
+  <!--
+    try loading the script tag inside the head section, then check the 
+    browser's JavaScript console (inspect element).
+
+    Can you work out what the problem is?
+  -->
+  <script src="js/greeting.js"></script>
+</body>
+</html>

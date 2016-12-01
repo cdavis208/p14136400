@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Selecting an element usng the 'target' pseudo-class</title>
+  <style>
+  :target {
+    background-color: #e5eecc;
+    transition: all 2s ease;
+  }
+  </style>
+</head>
+<body>
+
+<h1>Simple 'target' pseudo-class selector</h1>
+
+<nav:target>
+  <a href="#news1">Jump to New content 1</a> | <a href="#news2">Jump to New content 2</a>
+</nav>
+
+<p>Clicking the links above shows how the :target selector highlights the matching current active HTML anchor.</p>
+
+<p id="news1"><b>New content 1...</b></p>
+<p id="news2"><b>New content 2...</b></p>
+
+</body>
+</html>

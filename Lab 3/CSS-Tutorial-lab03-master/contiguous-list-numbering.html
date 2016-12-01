@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ordered lists, counter-reset and counter-increment</title>
+  <style>
+    /* the basics */
+    
+    .numlist {
+      counter-reset: mylist; /* 'mylist' is just a made-up name we give it */
+    }
+    .numlist li {
+      list-style-type: none; /* display: block; also removes numbers */
+    }
+    .numlist li:before {
+      content: counter(mylist) ". ";
+      counter-increment: mylist;
+    }
+    .numlist2 {
+      counter-reset: mylist 4;
+    }
+
+    /* variations with increment additions and alignment */
+    
+    .numlist3 li:before,
+    .numlist4 li:before {
+      counter-increment: mylist 3; /* count list numbers in threes */
+    }
+    .numlist3 li:before {
+      float: left; /* to pad numbers (or use display: inline-block;) */
+      width: 1.75em; /* aligns list items for both 1- and 2-digit numbers */
+    }
+    .numlist4 li:before {
+      float: left;
+      text-align: right;
+      padding-right: 0.5em; /* padding combined with... */
+      width: 1.25em; /* ...width aligns list items */
+    }
+
+  </style>
+</head>
+
+<body>
+    <h1>Managing contiguous series of ordered lists with CSS</h1>
+
+    <p>See <a href="https://css-tricks.com/almanac/properties/c/counter-reset/">CSS Tricks: counter-reset</a>. or the <a href="http://www.w3schools.com/cssref/pr_gen_counter-reset.asp">W3Schools page on counter-reset</a></p>
+    
+    <h2>The basics—one list continues from the previous</h2>
+    
+    <ol class="numlist">
+      <li>group one</li>
+      <li>group one</li>
+      <li>group one</li>
+      <li>group one</li>
+    </ol>
+
+    <p>Continue counting from the previous list, using <code>counter-reset: item 4</code></p>
+    <ol class="numlist numlist2">
+      <li>group two</li>
+      <li>group two</li>
+      <li>group two</li>
+      <li>group two</li>
+    </ol>
+
+    <h2>Aligning list items (and counting in threes!)</h2>
+    
+    <p>Count in threes with <code>counter-increment</code> and align list items with a <code>width</code> value</p>
+    <ol class="numlist numlist3">
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+    </ol>
+
+    <p>Right-align smaller and larger numbers with <code>width</code>, <code>text-align: right</code> and <code>padding-right</code></p>
+    <ol class="numlist numlist4">
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+    </ol>
+
+</body>
+</html>

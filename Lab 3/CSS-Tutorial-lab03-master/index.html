@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ordered lists, counter-reset and counter-increment</title>
+  <!--see: https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<div class="tabPanel-widget">
+    <label for="tab-1" tabindex="0"></label>
+      <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+<h2>link1</h2>
+    <div>
+    
+      <h2>Heading for Link 1</h2>
+    <p>Hello, I'm tab one!</p>
+    <p>One of the reasons the <code>:target</code> method has now been replaced with the technique you'll learn in exercise 2 is the problem with the URL needing an ID hash. But the CSS animation code is still worth knowing about.</p>
+    </div>
+    
+  
+
+<label for="tab-2" tabindex="0"></label>
+    <input id="tab-2" type="radio" name="tabs" aria-h idden="true">
+    
+    <h2>link2</h2>
+    <div>
+      
+     <nav:target>
+  <a href="#news1">Jump to New content 1</a> | <a href="#news2">Jump to New content 2</a>
+     </nav>
+
+<p>Clicking the links above shows how the :target selector highlights the matching current active HTML anchor.</p>
+<p id="news1"><b>New content 1...</b></p>
+<p id="news2"><b>New content 2...</b></p>
+    </div>
+
+    <label for="tab-3" tabindex="0"></label>
+    <input id="tab-3" type="radio" name="tabs" aria-h idden="true">
+    
+    <h2>link3</h2>
+    <div>
+      
+
+    <p>See <a href="https://css-tricks.com/almanac/properties/c/counter-reset/">CSS Tricks: counter-reset</a>. or the <a href="http://www.w3schools.com/cssref/pr_gen_counter-reset.asp">W3Schools page on counter-reset</a></p>
+    
+    <h2>The basics—one list continues from the previous</h2>
+    
+    <ol class="numlist">
+      <li>group one</li>
+      <li>group one</li>
+      <li>group one</li>
+      <li>group one</li>
+    </ol>
+
+    <p>Continue counting from the previous list, using <code>counter-reset: item 4</code></p>
+    <ol class="numlist numlist2">
+      <li>group two</li>
+      <li>group two</li>
+      <li>group two</li>
+      <li>group two</li>
+    </ol>
+
+    <h2>Aligning list items (and counting in threes!)</h2>
+    
+    <p>Count in threes with <code>counter-increment</code> and align list items with a <code>width</code> value</p>
+    <ol class="numlist numlist3">
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+    </ol>
+
+    <p>Right-align smaller and larger numbers with <code>width</code>, <code>text-align: right</code> and <code>padding-right</code></p>
+    <ol class="numlist numlist4">
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+      <li>group three</li>
+    </ol>
+    </div>
+</div>
+</html>

@@ -1,0 +1,81 @@
+/*some basic styles*/
+body {
+	margin: 0;
+	color: #555;
+	font-family: verdana, sans-serif;
+}
+header {
+	background: #ccc;
+	overflow: auto;
+}
+h1 {
+	margin: 0;
+	padding: 0.25em 12px;
+}
+main {
+	padding: 0 12px;
+}
+code {
+	font-size: 1.25em;
+	color: #990;
+}
+
+/*show-hide mobile-size nav nicely*/
+#nav-mobile {
+	line-height: 1.75em;
+	text-align: center;
+	background: #ddd;
+	font-weight: bold;
+}
+#nav-main a {
+	display: block;
+	text-align: center;
+	line-height: 1.75em;
+	text-decoration: none;
+	font-weight: bold;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: height 0.4s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+#nav-main:hover a {
+	/*transitions work on these three properties*/
+	height: 1.75em;
+	opacity: 1;
+	visibility: visible;
+}
+
+/*just decoration*/
+/* nav a {*/
+nav a {
+	display: inline-block;
+	color: #555;
+}
+#nav-main a:hover {
+	background: #bbb;
+}
+
+/*BREAKPOINT: larger than mobile*/
+@media screen and (min-width: 580px) {
+	#nav-main {
+		text-align: right;
+	}
+	#nav-main #nav-mobile {
+		display: none;
+	}
+	#nav-main a {
+		margin: 0;
+		height: 1.75em;
+		display: inline-block;
+		visibility: visible;
+		padding: 0 1em;
+		opacity: 1;
+		border-right: 3px solid #fff;
+	}
+	#nav-main a:hover {
+		background: #eee;
+	}
+	#nav-main a:last-child {
+		border-right: none;
+	}
+}
