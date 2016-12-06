@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON data example 01</title>
+</head>
+<body>
+  <p id="demo"></p>
+
+<!--
+  gets the data from a JavaScript file containing a variable named
+  'jsonString' whose value is a JSON-formatted string (look in the file):
+-->
+<script src="data/data.js"></script>
+
+<script>
+(function(){
+ // var i = 0;
+
+ var newLine = '</p><p>'
+  
+  let demoData = document.getElementById("demo");
+
+  // creates a JavaScript object by parsing the JSON-formatted string from the file
+  let obj = JSON.parse(jsonString);
+
+  /*
+    EXERCISE 01:
+    Rewrite this to make it loop through all the lecturers' names. 
+    (Note the ES6 'template literal' syntax):
+  */
+  for(var i = 0; i < obj.lecturers.length; i++){
+    let theData =  `${obj.lecturers[i].firstName} ${obj.lecturers[i].lastName } ${obj.lecturers[i].phoneNumber } \n`;
+    demoData.innerHTML += theData + newLine; 
+}
+  // populates the chosen element's content with the data:
+  
+
+ 
+ /*
+    EXERCISE 02:
+    Once you have looped through all the data, present the 
+    results on the page, styled with CSS.
+  */
+
+}());
+</script>
+<style>
+
+
+
+body {
+    background-color: linen;
+    color : blue;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+
+</style>
+</body>
+</html>
